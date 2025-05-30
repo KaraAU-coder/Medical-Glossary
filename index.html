@@ -482,22 +482,80 @@
             fr: { term: 'FR', example: 'Example_FR' }
         };
 
-        // Load and parse CSV data
-        async function loadMedicalData() {
+        // Medical glossary data - embedded for reliable loading
+        const medicalGlossaryData = [
+            {
+                "EN Term": "Airway",
+                "ZH": "气道",
+                "FR": "Voies aériennes",
+                "Category": "Basic",
+                "Subcategory": "General",
+                "Notes": "保持通畅是急救第一步",
+                "Example_EN": "Clear the airway first.",
+                "Example_ZH": "首先清理气道。",
+                "Example_FR": "Dégagez les voies aériennes en premier."
+            },
+            {
+                "EN Term": "Bandage",
+                "ZH": "绷带",
+                "FR": "Bandage",
+                "Category": "Instrument",
+                "Subcategory": "Wound Care",
+                "Notes": "用于压迫止血",
+                "Example_EN": "Apply sterile bandage.",
+                "Example_ZH": "使用无菌绷带。",
+                "Example_FR": "Appliquer un bandage stérile."
+            },
+            {
+                "EN Term": "Contraindication",
+                "ZH": "禁忌症",
+                "FR": "Contre-indication",
+                "Category": "Medication",
+                "Subcategory": "Safety",
+                "Notes": "禁止使用的情况",
+                "Example_EN": "Pregnancy is a contraindication.",
+                "Example_ZH": "妊娠是禁忌症。",
+                "Example_FR": "La grossesse est une contre-indication."
+            },
+            {
+                "EN Term": "Dialysis",
+                "ZH": "透析",
+                "FR": "Dialyse",
+                "Category": "Treatment",
+                "Subcategory": "Nephrology",
+                "Notes": "肾功能替代治疗",
+                "Example_EN": "Hemodialysis 3 times weekly.",
+                "Example_ZH": "每周3次血液透析。",
+                "Example_FR": "Hémodialyse 3 fois par semaine."
+            },
+            {
+                "EN Term": "ECG",
+                "ZH": "心电图",
+                "FR": "ECG",
+                "Category": "Diagnostic",
+                "Subcategory": "Cardiology",
+                "Notes": "心脏电活动记录",
+                "Example_EN": "Perform a 12-lead ECG.",
+                "Example_ZH": "做12导联心电图。",
+                "Example_FR": "Réaliser un ECG 12 dérivations."
+            },
+            {
+                "EN Term": "Fracture",
+                "ZH": "骨折",
+                "FR": "Fracture",
+                "Category": "Disease",
+                "Subcategory": "Orthopedics",
+                "Notes": "完全/不完全骨折",
+                "Example_EN": "Closed fracture needs casting.",
+                "Example_ZH": "闭合骨折需打石膏。",
+                "Example_FR": "Fracture fermée nécessite un plâtre."
+            }
+        ];
+
+        // Load medical data (now from embedded data)
+        function loadMedicalData() {
             try {
-                const response = await fetch('medical-glossary.csv');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const csvContent = await response.text();
-                
-                const parsedData = Papa.parse(csvContent, {
-                    header: true,
-                    dynamicTyping: true,
-                    skipEmptyLines: true
-                });
-                
-                medicalData = parsedData.data.filter(row => row['EN Term']); // Filter out empty rows
+                medicalData = medicalGlossaryData;
                 filteredData = [...medicalData];
                 
                 console.log(`✅ Loaded ${medicalData.length} medical terms`);
@@ -511,8 +569,7 @@
                     <div class="no-results">
                         <i class="fas fa-exclamation-triangle"></i>
                         <h3>Error Loading Data</h3>
-                        <p>Please make sure the medical-glossary.csv file is in the same directory.</p>
-                        <p><small>Error: ${error.message}</small></p>
+                        <p>Please check the console for more details.</p>
                     </div>
                 `;
             }
