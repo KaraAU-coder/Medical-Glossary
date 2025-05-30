@@ -193,14 +193,7 @@
         .results-grid {
             display: grid;
             gap: 20px;
-        }
-
-        .results-grid.card-view {
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
-
-        .results-grid.list-view {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr !important;
         }
 
         .term-card {
@@ -211,6 +204,8 @@
             transition: all 0.3s ease;
             border-left: 4px solid #74b9b9;
             border: 1px solid rgba(255, 255, 255, 0.6);
+            width: 100%;
+            max-width: none;
         }
 
         .term-card:hover {
@@ -443,14 +438,6 @@
         <div class="results-section">
             <div class="results-header">
                 <div class="results-count" id="resultsCount">Loading medical terms...</div>
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="card">
-                        <i class="fas fa-th"></i>
-                    </button>
-                    <button class="view-btn" data-view="list">
-                        <i class="fas fa-list"></i>
-                    </button>
-                </div>
             </div>
             
             <div class="results-grid card-view" id="resultsContainer">
@@ -661,6 +648,16 @@
             `;
         }
 
+        // Shuffle array function
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
         // Display search results
         function displayResults() {
             const container = document.getElementById('resultsContainer');
@@ -677,7 +674,17 @@
                 return;
             }
             
-            const resultsHTML = filteredData.map(term => createTermCard(term, searchTerm)).join('');
+            // Show only first 6 terms if no search/filter is active
+            let termsToShow = filteredData;
+            if (!searchTerm && 
+                !document.getElementById('categoryFilter').value && 
+                !document.getElementById('subcategoryFilter').value) {
+                // Shuffle and take first 6 for random display
+                const shuffled = shuffleArray(filteredData);
+                termsToShow = shuffled.slice(0, 6);
+            }
+            
+            const resultsHTML = termsToShow.map(term => createTermCard(term, searchTerm)).join('');
             container.innerHTML = resultsHTML;
         }
 
@@ -685,8 +692,17 @@
         function updateResultsCount() {
             const count = filteredData.length;
             const total = medicalData.length;
-            document.getElementById('resultsCount').textContent = 
-                `Showing ${count} of ${total} medical terms`;
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const subcategoryFilter = document.getElementById('subcategoryFilter').value;
+            
+            // Only show count when actively searching or filtering
+            if (searchTerm || categoryFilter || subcategoryFilter) {
+                document.getElementById('resultsCount').textContent = 
+                    `Showing ${count} of ${total} medical terms`;
+            } else {
+                document.getElementById('resultsCount').textContent = '';
+            }
         }
 
         // Filter data based on search and filters
