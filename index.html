@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪷 Medical Glossary 1.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #e8f5f3 0%, #d4f1f4 25%, #b8e6d3 50%, #a8ddd8 75%, #c7e9d0 100%);
+            min-height: 100vh;
+            color: #2d5a5a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a4d4d;
+            transform: translateX(-25px);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(26, 77, 77, 0.2);
+        }
+
+        .header .version {
+            font-size: 1rem;
+            color: #4a7373;
+            font-weight: 500;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            padding: 8px 20px;
+            border: 2px solid rgba(116, 185, 185, 0.4);
+            background: rgba(255, 255, 255, 0.8);
+            color: #2d5a5a;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            background: #74b9b9;
+            border-color: #5aa3a3;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(116, 185, 185, 0.4);
+        }
+
+        .search-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(116, 185, 185, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #d4f1f4;
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2d5a5a;
+        }
+
+        .search-input:focus {
+            border-color: #74b9b9;
+            box-shadow: 0 0 0 3px rgba(116, 185, 185, 0.2);
+        }
+
+        .search-input::placeholder {
+            color: #7a9e9e;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #74b9b9;
+            font-size: 1.2rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            border: 1px solid #d4f1f4;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 0.9rem;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #2d5a5a;
+        }
+
+        .filter-select:focus {
+            border-color: #74b9b9;
+            box-shadow: 0 0 0 2px rgba(116, 185, 185, 0.2);
+        }
+
+        .results-section {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(116, 185, 185, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            min-height: 400px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e8f5f3;
+        }
+
+        .results-count {
+            font-size: 1.1rem;
+            color: #5aa3a3;
+            font-weight: 600;
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 10px;
+        }
+
+        .view-btn {
+            padding: 8px 12px;
+            border: 1px solid #d4f1f4;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #2d5a5a;
+        }
+
+        .view-btn.active {
+            background: linear-gradient(135deg, #74b9b9, #8dc5c5);
+            color: white;
+            border-color: #74b9b9;
+            box-shadow: 0 2px 8px rgba(116, 185, 185, 0.3);
+        }
+
+        .results-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .results-grid.card-view {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .results-grid.list-view {
+            grid-template-columns: 1fr;
+        }
+
+        .term-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(116, 185, 185, 0.15);
+            transition: all 0.3s ease;
+            border-left: 4px solid #74b9b9;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .term-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(116, 185, 185, 0.25);
+            border-left-color: #5aa3a3;
+        }
+
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .term-main {
+            flex: 1;
+        }
+
+        .term-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a4d4d;
+            margin-bottom: 5px;
+        }
+
+        .term-translations {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .translation {
+            background: linear-gradient(135deg, #e8f5f3, #d4f1f4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2d5a5a;
+            border: 1px solid rgba(116, 185, 185, 0.2);
+        }
+
+        .term-category {
+            background: linear-gradient(135deg, #74b9b9, #8dc5c5, #5aa3a3);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(116, 185, 185, 0.3);
+        }
+
+        .term-details {
+            margin-top: 15px;
+        }
+
+        .detail-section {
+            margin-bottom: 12px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #4a7373;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .detail-content {
+            color: #2d5a5a;
+            line-height: 1.5;
+        }
+
+        .examples {
+            background: linear-gradient(135deg, #f0faf9, #e8f8f6);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            border: 1px solid rgba(116, 185, 185, 0.15);
+        }
+
+        .example-item {
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+
+        .example-lang {
+            font-weight: 600;
+            color: #5aa3a3;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .example-text {
+            color: #4a7373;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #7a9e9e;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.6;
+            color: #74b9b9;
+        }
+
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2d5a5a;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #74b9b9;
+        }
+
+        .loading i {
+            font-size: 2rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #e8f8f6, #d0f2ed);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1a4d4d;
+            box-shadow: 0 1px 3px rgba(116, 185, 185, 0.2);
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(116, 185, 185, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #4a7373;
+            font-size: 0.9rem;
+        }
+
+        .footer .purpose-message {
+            font-weight: 500;
+            color: #5aa3a3;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .filters {
+                justify-content: stretch;
+            }
+            
+            .filter-select {
+                flex: 1;
+                min-width: 120px;
+            }
+            
+            .results-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+            
+            .results-grid.card-view {
+                grid-template-columns: 1fr;
+            }
+            
+            .term-translations {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🪷 Medical Glossary 1.0</h1>
+            
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="en">
+                    English
+                </button>
+                <button class="lang-btn" data-lang="zh">
+                    中文
+                </button>
+                <button class="lang-btn" data-lang="fr">
+                    Français
+                </button>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search medical terms..." id="searchInput">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <div class="filters">
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">All Categories</option>
+                </select>
+                <select class="filter-select" id="subcategoryFilter">
+                    <option value="">All Subcategories</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <div class="results-count" id="resultsCount">Loading medical terms...</div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="card">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="results-grid card-view" id="resultsContainer">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Loading medical glossary...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="purpose-message" id="last-updated">
+                🍃 Built with purpose. Last updated <span id="update-date"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script>
+        let medicalData = [];
+        let filteredData = [];
+        let currentLanguage = 'en';
+        let currentView = 'card';
+
+        // Language configurations
+        const languages = {
+            en: { term: 'EN Term', example: 'Example_EN' },
+            zh: { term: 'ZH', example: 'Example_ZH' },
+            fr: { term: 'FR', example: 'Example_FR' }
+        };
+
+        // Load and parse CSV data
+        async function loadMedicalData() {
+            try {
+                const response = await fetch('medical-glossary.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const csvContent = await response.text();
+                
+                const parsedData = Papa.parse(csvContent, {
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true
+                });
+                
+                medicalData = parsedData.data.filter(row => row['EN Term']); // Filter out empty rows
+                filteredData = [...medicalData];
+                
+                console.log(`✅ Loaded ${medicalData.length} medical terms`);
+                
+                populateFilters();
+                displayResults();
+                updateResultsCount();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('resultsContainer').innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Error Loading Data</h3>
+                        <p>Please make sure the medical-glossary.csv file is in the same directory.</p>
+                        <p><small>Error: ${error.message}</small></p>
+                    </div>
+                `;
+            }
+        }
+
+        // Populate filter dropdowns
+        function populateFilters() {
+            const categories = [...new Set(medicalData.map(item => item.Category).filter(Boolean))].sort();
+            const subcategories = [...new Set(medicalData.map(item => item.Subcategory).filter(Boolean))].sort();
+            
+            const categorySelect = document.getElementById('categoryFilter');
+            const subcategorySelect = document.getElementById('subcategoryFilter');
+            
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categorySelect.appendChild(option);
+            });
+            
+            subcategories.forEach(subcategory => {
+                const option = document.createElement('option');
+                option.value = subcategory;
+                option.textContent = subcategory;
+                subcategorySelect.appendChild(option);
+            });
+        }
+
+        // Highlight search terms
+        function highlightText(text, searchTerm) {
+            if (!text || !searchTerm) return text;
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        // Create term card HTML
+        function createTermCard(term, searchTerm = '') {
+            const langConfig = languages[currentLanguage];
+            const termName = term[langConfig.term] || term['EN Term'];
+            const example = term[langConfig.example] || term['Example_EN'];
+            
+            return `
+                <div class="term-card">
+                    <div class="term-header">
+                        <div class="term-main">
+                            <div class="term-name">${highlightText(termName, searchTerm)}</div>
+                            <div class="term-translations">
+                                ${term['EN Term'] ? `<span class="translation">EN: ${highlightText(term['EN Term'], searchTerm)}</span>` : ''}
+                                ${term['ZH'] ? `<span class="translation">中文: ${highlightText(term['ZH'], searchTerm)}</span>` : ''}
+                                ${term['FR'] ? `<span class="translation">FR: ${highlightText(term['FR'], searchTerm)}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="term-category">${term.Category}${term.Subcategory ? ` • ${term.Subcategory}` : ''}</div>
+                    </div>
+                    
+                    <div class="term-details">
+                        ${term.Notes ? `
+                            <div class="detail-section">
+                                <div class="detail-label">Notes</div>
+                                <div class="detail-content">${highlightText(term.Notes, searchTerm)}</div>
+                            </div>
+                        ` : ''}
+                        
+                        ${(term['Example_EN'] || term['Example_ZH'] || term['Example_FR']) ? `
+                            <div class="examples">
+                                <div class="detail-label">Usage Examples</div>
+                                ${term['Example_EN'] ? `
+                                    <div class="example-item">
+                                        <div class="example-lang">English</div>
+                                        <div class="example-text">${highlightText(term['Example_EN'], searchTerm)}</div>
+                                    </div>
+                                ` : ''}
+                                ${term['Example_ZH'] ? `
+                                    <div class="example-item">
+                                        <div class="example-lang">中文</div>
+                                        <div class="example-text">${highlightText(term['Example_ZH'], searchTerm)}</div>
+                                    </div>
+                                ` : ''}
+                                ${term['Example_FR'] ? `
+                                    <div class="example-item">
+                                        <div class="example-lang">Français</div>
+                                        <div class="example-text">${highlightText(term['Example_FR'], searchTerm)}</div>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Display search results
+        function displayResults() {
+            const container = document.getElementById('resultsContainer');
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            
+            if (filteredData.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-search"></i>
+                        <h3>No results found</h3>
+                        <p>Try adjusting your search terms or filters.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const resultsHTML = filteredData.map(term => createTermCard(term, searchTerm)).join('');
+            container.innerHTML = resultsHTML;
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const count = filteredData.length;
+            const total = medicalData.length;
+            document.getElementById('resultsCount').textContent = 
+                `Showing ${count} of ${total} medical terms`;
+        }
+
+        // Filter data based on search and filters
+        function filterData() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const subcategoryFilter = document.getElementById('subcategoryFilter').value;
+            
+            filteredData = medicalData.filter(term => {
+                const matchesSearch = !searchTerm || 
+                    Object.values(term).some(value => 
+                        value && value.toString().toLowerCase().includes(searchTerm)
+                    );
+                
+                const matchesCategory = !categoryFilter || term.Category === categoryFilter;
+                const matchesSubcategory = !subcategoryFilter || term.Subcategory === subcategoryFilter;
+                
+                return matchesSearch && matchesCategory && matchesSubcategory;
+            });
+            
+            displayResults();
+            updateResultsCount();
+        }
+
+        // Initialize multilingual footer
+        function initializeFooter() {
+            const currentDate = new Date();
+            updateFooterWithDate(currentDate);
+        }
+
+        // Update footer with date and localization
+        function updateFooterWithDate(date) {
+            const footer = document.getElementById('last-updated');
+            const lang = navigator.language;
+            
+            let locale = 'en';
+            let message = '🍃 Built with purpose. Last updated';
+            
+            if (lang.startsWith('fr')) {
+                locale = 'fr-FR';
+                message = '🍃 Créé avec intention. Dernière mise à jour';
+            } else if (lang.startsWith('zh')) {
+                locale = 'zh-CN';
+                message = '🍃 初心不改，更新于';
+            }
+            
+            const formattedDate = date.toLocaleDateString(locale, {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            footer.innerHTML = `<span class="purpose-message">${message} <span id="update-date">${formattedDate}</span></span>`;
+        }
+
+        // Debounce function for search input
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize multilingual footer
+            initializeFooter();
+            
+            // Load medical data
+            loadMedicalData();
+            
+            // Search input
+            document.getElementById('searchInput').addEventListener('input', debounce(filterData, 300));
+            
+            // Filter dropdowns
+            document.getElementById('categoryFilter').addEventListener('change', filterData);
+            document.getElementById('subcategoryFilter').addEventListener('change', filterData);
+            
+            // Language selector
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentLanguage = this.dataset.lang;
+                    displayResults();
+                });
+            });
+            
+            // View toggle
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentView = this.dataset.view;
+                    
+                    const container = document.getElementById('resultsContainer');
+                    container.className = `results-grid ${currentView}-view`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
