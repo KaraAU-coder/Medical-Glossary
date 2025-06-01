@@ -178,3 +178,7 @@ Defibrillator,除颤器,Défibrillateur,Instrument,Emergency,Device to restore n
 Mental health,心理健康,Santé mentale,Assessment,Psychiatry,Psychological and emotional well-being,Assess mental health status.,评估心理健康状况。,Évaluer l'état de santé mentale.
 Telemedicine,远程医疗,Télémédecine,Procedure,Technology,Remote healthcare delivery via technology,Conduct telemedicine consultation.,进行远程医疗咨询。,Effectuer une consultation de télémédecine.
 PPE,个人防护装备,EPI,Instrument,Safety,Personal protective equipment,Wear appropriate PPE.,穿戴适当的个人防护装备。,Porter l'EPI approprié.Test Term,测试,Test,Basic,General,Test automation,This is a test.,这是测试。,Ceci est un test.
+Auto Detection Test,自动检测测试,Test de détection automatique,Procedure,Technology,Testing the new auto-detection system,The system automatically finds the newest CSV file.,系统自动找到最新的CSV文件。,Le système trouve automatiquement le fichier CSV le plus récent.
+Test Fix,测试修复,Test de correction,Status,General,Testing the fixed automation,The fixed automation should work now.,修复的自动化现在应该工作了。,L'automatisation corrigée devrait fonctionner maintenant.
+Clear Test Term,明确测试项,Terme de test clair,Test,Automation,This should definitely appear,This term proves automation works.,此术语证明自动化有效。,Ce terme prouve que l'automatisation fonctionne.
+Force Update Sun Jun  1 14:38:31     2025
