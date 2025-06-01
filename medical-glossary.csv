@@ -19,167 +19,162 @@ Quarantine,隔离,Quarantaine,Public Health,Infection,传染病控制,COVID pati
 Rash,皮疹,Éruption,Symptom,Dermatology,皮肤异常表现,Assess rash distribution.,评估皮疹分布。,Évaluer la distribution de l'éruption.
 Suture,缝合,Suture,Procedure,Surgery,伤口闭合方法,Remove sutures after 7 days.,7天后拆线。,Retirer les sutures après 7 jours.
 Tendon,肌腱,Tendon,Anatomy,Orthopedics,连接肌肉与骨骼,Achilles tendon is vulnerable.,跟腱容易受伤。,Le tendon d'Achille est vulnérable.
-Ulcer,溃疡,Ulcère,Disease,Gastroenterology,黏膜破损,Peptic ulcer needs endoscopy.,消化性溃疡需胃镜。,Ulcère gastro-duodénal nécessite une endoscopie.
-Virus,病毒,Virus,Pathogen,Microbiology,非细胞病原体,Antibiotics don't kill viruses.,抗生素不杀病毒。,Les antibiotiques ne tuent pas les virus.
-Wound,伤口,Plaie,Injury,Trauma,清洁伤口防感染,Clean the wound thoroughly.,彻底清洁伤口。,Nettoyer soigneusement la plaie.
-X-ray,X光片,Radiographie,Diagnostic,Imaging,骨骼系统检查,Chest X-ray shows pneumonia.,胸片显示肺炎。,La radiographie pulmonaire montre une pneumonie.
-Yellow fever,黄热病,Fièvre jaune,Disease,Infectious,蚊媒传染病,Yellow fever vaccine exists.,有黄热病疫苗。,Le vaccin contre la fièvre jaune existe.
-Zinc,锌,Zinc,Medication,Nutrition,微量元素补充,Zinc aids wound healing.,锌促进伤口愈合。,Le zinc favorise la cicatrisation.
-Anemia,贫血,Anémie,Disease,Hematology,血红蛋白降低,Iron deficiency causes anemia.,缺铁导致贫血。,La carence en fer provoque l'anémie.
-Bacteria,细菌,Bactérie,Pathogen,Microbiology,抗生素靶向,Culture identifies bacteria.,培养鉴定细菌。,La culture identifie les bactéries.
-CT scan,CT扫描,Scanner,Diagnostic,Imaging,计算机断层成像,Head CT rules out bleeding.,头颅CT排除出血。,Le scanner cérébral élimine l'hémorragie.
-Dehydration,脱水,Déshydratation,Condition,General,体液不足,Severe dehydration needs IV fluids.,严重脱水需静脉补液。,La déshydratation sévère nécessite des perfusions.
-Edema,水肿,Œdème,Symptom,General,组织液积聚,Pitting edema in legs.,下肢凹陷性水肿。,Œdème prenant le godet aux membres inférieurs.
-Fever,发热,Fièvre,Symptom,General,体温>37.5℃,Manage fever with antipyretics.,用退热药处理发热。,Gérer la fièvre avec des antipyrétiques.
-Gastritis,胃炎,Gastrite,Disease,Gastroenterology,胃黏膜炎症,Avoid NSAIDs with gastritis.,胃炎避免用NSAIDs。,Éviter les AINS avec gastrite.
-Hemoglobin,血红蛋白,Hémoglobine,Lab Test,Hematology,携氧蛋白,Low hemoglobin indicates anemia.,血红蛋白低提示贫血。,Un faible taux d'hémoglobine indique une anémie.
-Immunization,免疫接种,Immunisation,Treatment,Preventive,疫苗预防,Childhood immunization schedule.,儿童免疫接种计划。,Calendrier de vaccination des enfants.
-Jaundice,黄疸,Jaunisse,Symptom,Hepatology,胆红素升高,Neonatal jaundice is common.,新生儿黄疸常见。,La jaunisse néonatale est fréquente.
-Ketones,酮体,Corps cétoniques,Lab Test,Metabolic,糖尿病酮症,Urine ketones in DKA.,糖尿病酮症酸中毒时尿酮阳性。,Corps cétoniques urinaires dans l'ACD.
-Lymph node,淋巴结,Ganglion lymphatique,Anatomy,Immunology,免疫器官,Palpable lymph nodes may indicate infection.,可触及淋巴结可能提示感染。,Les ganglions palpables peuvent indiquer une infection.
-MRI,磁共振成像,IRM,Diagnostic,Imaging,无辐射成像,MRI shows soft tissue details.,MRI显示软组织细节。,L'IRM montre les détails des tissus mous.
-Nebulizer,雾化器,Nébuliseur,Instrument,Respiratory,吸入治疗,Use nebulizer for asthma.,哮喘使用雾化器。,Utiliser un nébuliseur pour l'asthme.
-Obesity,肥胖,Obésité,Condition,Metabolic,BMI≥30,Obesity increases diabetes risk.,肥胖增加糖尿病风险。,L'obésité augmente le risque de diabète.
-Pneumonia,肺炎,Pneumonie,Disease,Respiratory,肺部感染,Chest X-ray confirms pneumonia.,胸片确诊肺炎。,La radiographie pulmonaire confirme la pneumonie.
-Quinine,奎宁,Quinine,Medication,Infectious,抗疟疾药,Quinine treats malaria.,奎宁治疗疟疾。,La quinine traite le paludisme.
-Rheumatism,风湿病,Rhumatisme,Disease,Rheumatology,关节/结缔组织病,Rheumatism causes joint pain.,风湿病导致关节疼痛。,Le rhumatisme provoque des douleurs articulaires.
-Sepsis,脓毒症,Septicémie,Emergency,Infection,全身炎症反应,Sepsis requires antibiotics.,脓毒症需抗生素。,La septicémie nécessite des antibiotiques.
-Tuberculosis,结核,Tuberculose,Disease,Infectious,分枝杆菌感染,TB needs long-term treatment.,结核需长期治疗。,La tuberculose nécessite un traitement à long terme.
-Ultrasound,超声,Échographie,Diagnostic,Imaging,无创检查,Abdominal ultrasound for gallstones.,腹部超声查胆结石。,Échographie abdominale pour les calculs biliaires.
-Vaccine,疫苗,Vaccin,Treatment,Preventive,主动免疫,COVID vaccine reduces severity.,新冠疫苗减轻重症。,Le vaccin COVID réduit la gravité.
-Wheezing,哮鸣音,Sibilance,Symptom,Respiratory,气道狭窄音,Wheezing suggests asthma.,哮鸣音提示哮喘。,Des sibilances suggèrent de l'asthme.
-Xerostomia,口干,Xérostomie,Symptom,Dental,唾液分泌减少,Chemotherapy causes xerostomia.,化疗导致口干。,La chimiothérapie provoque une xérostomie.
-Yeast infection,酵母菌感染,Infection à levures,Disease,Dermatology,真菌感染,Yeast infection needs antifungals.,酵母菌感染需抗真菌药。,L'infection à levures nécessite des antifongiques.
-Zoster,带状疱疹,Zona,Disease,Infectious,水痘病毒再激活,Zoster causes painful rash.,带状疱疹引起疼痛性皮疹。,Le zona provoque une éruption cutanée douloureuse.
-EN Term,ZH,FR,Category,Subcategory,Notes,Example_EN,Example_ZH,Example_FR
-Abdomen,腹部,Abdomen,Anatomy,General,胸与骨盆之间的区域,Palpate the abdomen gently.,轻柔触诊腹部。,Palper l'abdomen délicatement.
-Bowel,肠,Intestin,Anatomy,General,消化系统末端,Bowel sounds indicate motility.,肠鸣音反映蠕动。,Les bruits intestinaux indiquent la motilité.
-Consciousness,意识,Conscience,Status,General,清醒/嗜睡/昏迷,Assess consciousness level.,评估意识水平。,Évaluer le niveau de conscience.
-Dizziness,头晕,Vertige,Symptom,General,空间定向障碍,Dizziness when standing up.,站立时头晕。,Vertige en se levant.
-Examination,检查,Examen,Procedure,General,体格检查,Complete physical examination.,完成体格检查。,Examen physique complet.
-Fatigue,疲劳,Fatigue,Symptom,General,主观疲倦感,Chronic fatigue needs evaluation.,慢性疲劳需评估。,La fatigue chronique nécessite une évaluation.
-Gait,步态,Démarche,Assessment,General,行走方式观察,Observe the patient's gait.,观察患者步态。,Observer la démarche du patient.
-Hydration,水合状态,Hydratation,Status,General,体液平衡,Check skin turgor for hydration.,检查皮肤弹性评估水合。,Vérifier la turgescence cutanée pour l'hydratation.
-Itching,瘙痒,Démangeaison,Symptom,General,皮肤刺激感,Itching with rash needs cream.,皮疹伴瘙痒需药膏。,Démangeaisons avec éruption nécessitent une crème.
-Joint,关节,Articulation,Anatomy,General,骨连接部位,Joint swelling suggests arthritis.,关节肿胀提示关节炎。,Un gonflement articulaire suggère de l'arthrite.
-Kidney,肾脏,Rein,Anatomy,General,泌尿系统过滤器官,Kidney filters waste products.,肾脏过滤废物。,Le rein filtre les déchets.
-Lymph,淋巴,Lymphe,Physiology,General,免疫系统液体,Lymph nodes filter lymph.,淋巴结过滤淋巴液。,Les ganglions filtrent la lymphe.
-Malaise,不适,Malaise,Symptom,General,整体不适感,Fever with malaise suggests infection.,发热伴不适提示感染。,Fièvre avec malaise suggère une infection.
-Numbness,麻木,Engourdissement,Symptom,General,感觉减退,Numbness in fingers needs evaluation.,手指麻木需评估。,Un engourdissement des doigts nécessite une évaluation.
-Oxygen,氧气,Oxygène,Physiology,General,生命必需气体,Supplemental oxygen improves saturation.,补充氧气提高血氧。,L'oxygène supplémentaire améliore la saturation.
-Pain,疼痛,Douleur,Symptom,General,按0-10分评估,Rate your pain from 0 to 10.,用0-10分评估疼痛。,Évaluez votre douleur de 0 à 10.
-Quality of life,生活质量,Qualité de vie,Assessment,General,健康相关生活评价,Chronic pain affects quality of life.,慢性疼痛影响生活质量。,La douleur chronique affecte la qualité de vie.
-Respiration,呼吸,Respiration,Physiology,General,气体交换过程,Count respiration rate.,计数呼吸频率。,Compter la fréquence respiratoire.
-Skin,皮肤,Peau,Anatomy,General,最大的人体器官,Check skin for rashes.,检查皮肤有无皮疹。,Vérifier la peau pour des éruptions.
-Temperature,体温,Température,Vital Sign,General,核心体温,Oral temperature is accurate.,口腔测温准确。,La température orale est précise.
-Urine,尿液,Urine,Physiology,General,肾脏排泄液体,Dark urine suggests dehydration.,尿色深提示脱水。,Une urine foncée suggère une déshydratation.
-Vein,静脉,Veine,Anatomy,General,血液回心管道,Draw blood from the vein.,从静脉抽血。,Prélever du sang dans la veine.
-Weight,体重,Poids,Measurement,General,健康重要指标,Monitor weight weekly.,每周监测体重。,Surveiller le poids hebdomadairement.
-Xerosis,皮肤干燥,Xérose,Condition,General,角质层缺水,Xerosis needs moisturizer.,皮肤干燥需保湿剂。,La xérose nécessite une crème hydratante.
-Yawn,打哈欠,Bâillement,Physiology,General,反射性深呼吸,Excessive yawning may indicate fatigue.,过度打哈欠可能提示疲劳。,Un bâillement excessif peut indiquer une fatigue.
-Zinc,锌,Zinc,Nutrition,General,必需微量元素,Zinc supports immunity.,锌增强免疫力。,Le zinc soutient l'immunité.
-Appetite,食欲,Appétit,Status,General,进食欲望,Loss of appetite needs investigation.,食欲减退需排查。,Une perte d'appétit nécessite des investigations.
-Blood,血液,Sang,Physiology,General,循环结缔组织,Blood carries oxygen.,血液携带氧气。,Le sang transporte l'oxygène.
-Cough,咳嗽,Toux,Symptom,General,呼吸道防御反射,Dry cough vs productive cough.,干咳 vs 咳痰。,Toux sèche vs toux productive.
-Digestion,消化,Digestion,Physiology,General,食物分解过程,Good digestion requires enzymes.,良好消化需要酶。,Une bonne digestion nécessite des enzymes.
-Energy,精力,Énergie,Status,General,活动能力,Low energy may indicate anemia.,精力不足可能提示贫血。,Un manque d'énergie peut indiquer une anémie.
-EN Term,ZH,FR,Category,Subcategory,Notes,Example_EN,Example_ZH,Example_FR
-Blood Pressure,血压,Pression artérielle,Vital Sign,General,收缩压/舒张压,BP 120/80 is normal.,血压120/80为正常值。,Une PA de 120/80 est normale.
-Heart Rate,心率,Fréquence cardiaque,Vital Sign,General,60-100次/分正常,HR 72 and regular.,心率72次且规则。,FC à 72 et régulière.
-Respiratory Rate,呼吸频率,Fréquence respiratoire,Vital Sign,General,12-20次/分正常,Count RR for 1 minute.,计数呼吸频率1分钟。,Compter la FR pendant 1 minute.
-Temperature,体温,Température,Vital Sign,General,36.5-37.5℃正常,Oral temp 37.2℃.,口腔温度37.2℃。,"Température orale 37,2℃."
-Oxygen Saturation,血氧饱和度,Saturation en oxygène,Vital Sign,General,>95%正常,SpO2 98% on room air.,未吸氧时血氧98%。,SpO2 à 98% en air ambiant.
-Pulse,脉搏,Pouls,Vital Sign,General,与心率一致,Radial pulse strong.,桡动脉脉搏强。,Pouls radial fort.
-Rhythm,节律,Rythme,Vital Sign,General,规则/不规则,Irregular pulse rhythm.,脉搏节律不规则。,Rythme cardiaque irrégulier.
-Capillary Refill,毛细血管再充盈,Temps de recoloration capillaire,Vital Sign,General,<2秒正常,Delayed refill in shock.,休克时再充盈延迟。,Temps de recoloration prolongé dans le choc.
-Consciousness Level,意识水平,Niveau de conscience,Vital Sign,General,AVPU评估法,Patient is alert.,患者清醒。,Le patient est alerte.
-Pain Score,疼痛评分,Score de douleur,Vital Sign,General,0-10分标准,Pain score 4/10.,疼痛评分4分。,Douleur à 4/10.
-Skin Color,皮肤颜色,Couleur de la peau,Vital Sign,General,苍白/发绀/潮红,Pale skin in anemia.,贫血时皮肤苍白。,Peau pâle dans l'anémie.
-Pupil Size,瞳孔大小,Taille pupillaire,Vital Sign,Neurological,2-4mm正常,Pinpoint pupils in opioid OD.,阿片类药物过量时针尖样瞳孔。,Pupilles en point d'épingle dans l'overdose d'opioïdes.
-Respiratory Effort,呼吸努力,Effort respiratoire,Vital Sign,Respiratory,观察辅助肌使用,Increased effort in asthma.,哮喘时呼吸费力。,Effort accru dans l'asthme.
-Breath Sounds,呼吸音,Bruits respiratoires,Vital Sign,Respiratory,清音/啰音/哮鸣音,Clear breath sounds bilaterally.,双肺呼吸音清。,Bruits respiratoires clairs bilatéralement.
-Oxygen Flow Rate,氧流量,Débit d'oxygène,Vital Sign,Respiratory,升/分钟,Increase O2 to 6L/min.,氧流量增至6升/分钟。,Augmenter l'O2 à 6L/min.
-Blood Glucose,血糖,Glycémie,Vital Sign,Metabolic,空腹3.9-6.1mmol/L,Fasting glucose 5.8mmol/L.,空腹血糖5.8mmol/L。,"Glycémie à jeun 5,8mmol/L."
-Urine Output,尿量,Diurèse,Vital Sign,Renal,>0.5ml/kg/h正常,Monitor urine output hourly.,每小时监测尿量。,Surveiller la diurèse horaire.
-Body Weight,体重,Poids corporel,Vital Sign,General,公斤单位,Daily weight monitoring.,每日体重监测。,Surveillance quotidienne du poids.
-BMI,体重指数,IMC,Vital Sign,General,kg/m²,BMI 23 is normal.,BMI 23为正常值。,IMC 23 est normal.
-Blood Loss,失血量,Perte sanguine,Vital Sign,Trauma,临床估算,Estimate blood loss 500ml.,估算失血量500ml。,Estimer la perte sanguine à 500ml.
-Pain Location,疼痛部位,Localisation de la douleur,Vital Sign,General,解剖学定位,Pain in right lower quadrant.,右下腹疼痛。,Douleur dans la fosse iliaque droite.
-Pain Character,疼痛性质,Caractère de la douleur,Vital Sign,General,锐痛/钝痛/绞痛,Colicky abdominal pain.,腹部绞痛。,Douleur abdominale colique.
-Pain Duration,疼痛持续时间,Durée de la douleur,Vital Sign,General,分钟/小时/天,Pain lasting 2 hours.,疼痛持续2小时。,Douleur durant 2 heures.
-Pain Radiation,疼痛放射,Irradiation de la douleur,Vital Sign,General,牵涉痛,Pain radiates to the back.,疼痛放射至背部。,Douleur irradiant dans le dos.
-Pallor,苍白,Pâleur,Vital Sign,General,贫血/休克体征,Conjunctival pallor present.,结膜苍白。,Pâleur conjonctivale présente.
-Cyanosis,发绀,Cyanose,Vital Sign,Respiratory,血氧不足表现,Peripheral cyanosis noted.,可见外周性发绀。,Cyanose périphérique notée.
-Jaundice,黄疸,Ictère,Vital Sign,Hepatic,巩膜/皮肤黄染,Scleral icterus present.,巩膜黄染。,Ictère scléral présent.
-Edema,水肿,Œdème,Vital Sign,General,凹陷性/非凹陷性,Pitting edema in ankles.,踝部凹陷性水肿。,Œdème prenant le godet aux chevilles.
-Diaphoresis,大汗,Diaphorèse,Vital Sign,General,病理性出汗,Diaphoresis in heart attack.,心梗时大汗。,Diaphorèse dans l'infarctus.
-Tremor,震颤,Tremblement,Vital Sign,Neurological,静止性/动作性,Fine tremor in hyperthyroidism.,甲亢时细震颤。,Tremblement fin dans l'hyperthyroïdie.
-Orientation,定向力,Orientation,Vital Sign,Neurological,人物/时间/地点,Disoriented to time.,时间定向力障碍。,Désorienté dans le temps.
-Speech,言语,Parole,Vital Sign,Neurological,流利性/清晰度,Slurred speech in stroke.,中风时言语含糊。,Élocution trouble dans l'AVC.
-Gait,步态,Démarche,Vital Sign,Neurological,步态观察,Ataxic gait in cerebellar lesion.,小脑病变时共济失调步态。,Démarche ataxique dans une lésion cérébelleuse.
-Strength,肌力,Force musculaire,Vital Sign,Neurological,0-5级评估,Grade 4/5 muscle strength.,肌力4/5级。,Force musculaire 4/5.
-Reflexes,反射,Réflexes,Vital Sign,Neurological,深/浅反射,Hyperreflexia in spinal cord injury.,脊髓损伤时反射亢进。,Hyperréflexie dans un traumatisme médullaire.
-Skin Temperature,皮肤温度,Température cutanée,Vital Sign,General,触诊评估,Cold clammy skin in shock.,休克时皮肤湿冷。,Peau froide et moite dans le choc.
-Moisture,湿润度,Hydratation cutanée,Vital Sign,General,干燥/湿润,Dry skin in dehydration.,脱水时皮肤干燥。,Peau sèche dans la déshydratation.
-Turgor,弹性,Turgescence,Vital Sign,General,脱水评估,Poor skin turgor in elderly.,老年人皮肤弹性差。,Mauvaise turgescence cutanée chez les personnes âgées.
-Lesion,皮损,Lésion,Vital Sign,Dermatology,原发性/继发性,Describe the skin lesion.,描述皮损特征。,Décrire la lésion cutanée.
-Rash,皮疹,Éruption,Vital Sign,Dermatology,分布/形态,Maculopapular rash on trunk.,躯干斑丘疹。,Éruption maculopapuleuse sur le tronc.
-Wheeze,哮鸣音,Sibilance,Vital Sign,Respiratory,呼气相明显,Wheeze audible without stethoscope.,无需听诊器可闻及哮鸣音。,Sibilance audible sans stéthoscope.
-Stridor,喘鸣,Stridor,Vital Sign,Respiratory,吸气相刺耳音,Stridor indicates airway obstruction.,喘鸣提示气道梗阻。,Stridor indique une obstruction des voies aériennes.
-Cough,咳嗽,Toux,Vital Sign,Respiratory,干咳/湿咳,Productive cough with sputum.,咳痰的湿咳。,Toux productive avec expectorations.
-Sputum,痰,Expectoration,Vital Sign,Respiratory,颜色/粘度,Purulent sputum in infection.,感染时脓性痰。,Expectorations purulentes dans l'infection.
-Nail Color,甲床颜色,Couleur des ongles,Vital Sign,General,毛细血管充盈,Bluish nail beds in hypoxia.,缺氧时甲床发绀。,Lit unguéal bleuté dans l'hypoxie.
-Capillary Pulse,毛细血管搏动,Pouls capillaire,Vital Sign,General,甲床观察,Quincke's sign in aortic regurgitation.,主动脉瓣反流时Quincke征阳性。,Signe de Quincke dans l'insuffisance aortique.
-Jugular Vein,颈静脉,Veine jugulaire,Vital Sign,Cardiac,静脉压评估,Elevated JVP in heart failure.,心衰时颈静脉怒张。,PVC élevée dans l'insuffisance cardiaque.
-Heart Sound,心音,Bruits du cœur,Vital Sign,Cardiac,S1/S2/S3/S4,Gallop rhythm in CHF.,心衰时奔马律。,Bruit de galop dans l'IC.
-Murmur,心脏杂音,Souffle cardiaque,Vital Sign,Cardiac,收缩期/舒张期,Systolic murmur at apex.,心尖部收缩期杂音。,Souffle systolique à la pointe.
-Bowel Sound,肠鸣音,Bruits intestinaux,Vital Sign,Gastrointestinal,每分钟次数,Absent bowel sounds in ileus.,肠梗阻时肠鸣音消失。,Absence de bruits intestinaux dans l'iléus.
-EN Term,ZH,FR,Category,Subcategory,Notes,Example_EN,Example_ZH,Example_FR
-Auscultate,听诊,Auscultation,Procedure,Examination,用听诊器检查,Auscultate lung sounds.,听诊呼吸音。,Auscultation des bruits pulmonaires.
-Palpate,触诊,Palper,Procedure,Examination,用手触摸检查,Palpate the abdomen.,触诊腹部。,Palper l'abdomen.
-Percuss,叩诊,Percuter,Procedure,Examination,评估脏器边界,Percuss the lung fields.,叩诊肺野。,Percuter les champs pulmonaires.
-Inspect,视诊,Inspecter,Procedure,Examination,视觉观察,Inspect the skin.,视诊皮肤。,Inspecter la peau.
-Measure,测量,Mesurer,Procedure,General,量化指标,Measure blood pressure.,测量血压。,Mesurer la pression artérielle.
-Record,记录,Documenter,Procedure,General,医疗文书书写,Record vital signs.,记录生命体征。,Documenter les signes vitaux.
-Administer,给药,Administrer,Procedure,Medication,给予治疗,Administer IV antibiotics.,静脉给予抗生素。,Administrer des antibiotiques IV.
-Collect,采集,Recueillir,Procedure,Lab,标本收集,Collect urine sample.,采集尿液样本。,Recueillir un échantillon d'urine.
-Dress,换药,Panser,Procedure,Wound Care,伤口处理,Dress the surgical wound.,为手术伤口换药。,Panser la plaie chirurgicale.
-Immobilize,固定,Immobiliser,Procedure,Trauma,限制活动,Immobilize the fracture.,固定骨折部位。,Immobiliser la fracture.
-Irrigate,冲洗,Irriguer,Procedure,Wound Care,清洁伤口,Irrigate the wound with saline.,用生理盐水冲洗伤口。,Irriguer la plaie avec du sérum physiologique.
-Debride,清创,Débrider,Procedure,Wound Care,去除坏死组织,Debride necrotic tissue.,清创坏死组织。,Débrider les tissus nécrotiques.
-Suture,缝合,Suturer,Procedure,Surgery,关闭伤口,Suture the laceration.,缝合撕裂伤。,Suturer la lacération.
-Intubate,插管,Intuber,Procedure,Emergency,建立人工气道,Intubate for airway protection.,为保护气道插管。,Intuber pour protéger les voies aériennes.
-Catheterize,导尿,Cathétériser,Procedure,Urology,留置导尿管,Catheterize the bladder.,行膀胱导尿。,Cathétériser la vessie.
-Inject,注射,Injecter,Procedure,Medication,皮下/肌注/静注,Inject insulin subcutaneously.,皮下注射胰岛素。,Injecter l'insuline par voie sous-cutanée.
-Aspirate,抽吸,Aspirer,Procedure,General,清除分泌物,Aspirate airway secretions.,抽吸气道分泌物。,Aspirer les sécrétions des voies aériennes.
-Drain,引流,Drainer,Procedure,Surgery,排出积液,Drain the abscess.,引流脓肿。,Drainer l'abcès.
-Lavage,灌洗,Lavage,Procedure,Gastrointestinal,清洗体腔,Gastric lavage for poisoning.,洗胃治疗中毒。,Lavage gastrique pour intoxication.
-Suction,吸引,Aspiration,Procedure,Respiratory,负压吸引,Suction oral secretions.,吸引口腔分泌物。,Aspirer les sécrétions orales.
-Reduce,复位,Réduire,Procedure,Orthopedics,关节/骨折复位,Reduce the dislocation.,复位脱位关节。,Réduire la luxation.
-Splint,夹板固定,Atteller,Procedure,Orthopedics,临时固定,Splint the fractured limb.,用夹板固定骨折肢体。,Atteller le membre fracturé.
-Bandage,包扎,Bandager,Procedure,Wound Care,敷料固定,Bandage the wound firmly.,妥善包扎伤口。,Bandager fermement la plaie.
-Elevate,抬高,Surélever,Procedure,General,促进回流,Elevate the injured leg.,抬高受伤的腿。,Surélever la jambe blessée.
-Apply,敷用,Appliquer,Procedure,Medication,局部用药,Apply ointment to the rash.,将药膏涂抹于皮疹处。,Appliquer la pommade sur l'éruption.
-Remove,移除,Retirer,Procedure,General,去除医疗装置,Remove the IV catheter.,移除静脉导管。,Retirer le cathéter IV.
-Insert,置入,Insérer,Procedure,General,放置医疗装置,Insert a nasogastric tube.,置入鼻胃管。,Insérer une sonde nasogastrique.
-Extract,拔除,Extraire,Procedure,Dental,牙齿移除,Extract the decayed tooth.,拔除龋齿。,Extraire la dent cariée.
-Irrigate,冲洗,Irriguer,Procedure,Eye,眼部清洁,Irrigate the eye with saline.,用生理盐水冲洗眼睛。,Irriguer l'œil avec du sérum physiologique.
-Swab,拭子取样,Écouvillonner,Procedure,Microbiology,微生物采样,Swab the throat for culture.,咽拭子培养。,Prélever un écouvillonnage de gorge pour culture.
-Culture,培养,Mettre en culture,Procedure,Lab,微生物培养,Culture the wound swab.,培养伤口拭子。,Mettre en culture l'écouvillon de plaie.
-Stain,染色,Colorer,Procedure,Lab,显微镜检查,Gram stain the specimen.,标本革兰氏染色。,Colorer le spécimen par Gram.
-Centrifuge,离心,Centrifuger,Procedure,Lab,分离血液成分,Centrifuge the blood sample.,离心血液样本。,Centrifuger l'échantillon de sang.
-Incubate,孵育,Incuber,Procedure,Lab,微生物培养,Incubate at 37°C for 24h.,37°C孵育24小时。,Incuber à 37°C pendant 24h.
-Titrate,滴定,Titrer,Procedure,Medication,精确调整剂量,Titrate the oxygen flow.,滴定氧流量。,Titrer le débit d'oxygène.
-Weigh,称重,Peser,Procedure,General,精确测量重量,Weigh the patient daily.,每日称患者体重。,Peser le patient quotidiennement.
-Count,计数,Compter,Procedure,Lab,数量评估,Count white blood cells.,计数白细胞。,Compter les globules blancs.
-Dilute,稀释,Diluer,Procedure,Medication,降低浓度,Dilute the medication with saline.,用生理盐水稀释药物。,Diluer le médicament avec du sérum physiologique.
-Filter,过滤,Filtrer,Procedure,Lab,去除杂质,Filter the urine sample.,过滤尿液样本。,Filtrer l'échantillon d'urine.
-Label,标记,Étiqueter,Procedure,General,标本标识,Label all specimens clearly.,清晰标记所有标本。,Étiqueter clairement tous les échantillons.
-Transport,运送,Transporter,Procedure,Lab,标本转运,Transport specimens on ice.,冰上运送标本。,Transporter les échantillons sur glace.
-Store,储存,Stocker,Procedure,Lab,保存条件,Store plasma at -20°C.,-20°C储存血浆。,Stocker le plasma à -20°C.
-Disinfect,消毒,Désinfecter,Procedure,Infection Control,表面清洁,Disinfect the wound area.,消毒伤口周围。,Désinfecter la zone de la plaie.
-Sterilize,灭菌,Stériliser,Procedure,Surgery,杀灭所有微生物,Sterilize surgical instruments.,灭菌手术器械。,Stériliser les instruments chirurgicaux.
-Position,摆放体位,Positionner,Procedure,General,诊疗体位,Position the patient supine.,摆放患者仰卧位。,Positionner le patient en décubitus dorsal.
-Restrain,约束,Contentir,Procedure,Psychiatry,保护性措施,Restrain the agitated patient.,约束躁动患者。,Contentir le patient agité.
-Resuscitate,复苏,Réanimer,Procedure,Emergency,心肺复苏,Resuscitate the cardiac arrest patient.,对心脏骤停患者进行复苏。,Réanimer le patient en arrêt cardiaque.
-Defibrillate,除颤,Défibriller,Procedure,Emergency,电击复律,Defibrillate ventricular fibrillation.,对室颤进行除颤。,Défibriller la fibrillation ventriculaire.
+Ulcer,溃疡,Ulcère,Disease,Gastroenterology,胃肠道损伤,Peptic ulcer causes pain.,消化性溃疡引起疼痛。,L'ulcère peptique cause de la douleur.
+Virus,病毒,Virus,Pathogen,Microbiology,致病微生物,Virus causes infection.,病毒引起感染。,Le virus cause une infection.
+Wound,伤口,Plaie,Injury,General,皮肤完整性破坏,Clean wound thoroughly.,彻底清洁伤口。,Nettoyer soigneusement la plaie.
+X-ray,X光,Radiographie,Diagnostic,Imaging,医学影像检查,Order chest X-ray.,开胸部X光检查。,Prescrire une radiographie thoracique.
+Yellow fever,黄热病,Fièvre jaune,Disease,Infectious,蚊媒传播疾病,Yellow fever requires vaccination.,黄热病需要疫苗接种。,La fièvre jaune nécessite une vaccination.
+Zinc,锌,Zinc,Nutrition,Mineral,必需微量元素,Zinc deficiency affects immunity.,缺锌影响免疫力。,La carence en zinc affecte l'immunité.
+Anemia,贫血,Anémie,Disease,Hematology,血红蛋白减少,Iron deficiency causes anemia.,缺铁导致贫血。,La carence en fer cause l'anémie.
+Bacteria,细菌,Bactérie,Pathogen,Microbiology,原核致病菌,Bacteria cause infections.,细菌引起感染。,Les bactéries causent des infections.
+CT scan,CT扫描,Scanner,Diagnostic,Imaging,计算机断层扫描,CT scan shows detailed images.,CT扫描显示详细图像。,Le scanner montre des images détaillées.
+Dehydration,脱水,Déshydratation,Condition,General,体液不足,Prevent dehydration in elderly.,预防老年人脱水。,Prévenir la déshydratation chez les personnes âgées.
+Edema,水肿,Œdème,Symptom,General,组织液体积聚,Heart failure causes edema.,心力衰竭引起水肿。,L'insuffisance cardiaque cause un œdème.
+Fever,发热,Fièvre,Symptom,General,体温升高>37.5°C,Monitor fever closely.,密切监测发热。,Surveiller étroitement la fièvre.
+Gastritis,胃炎,Gastrite,Disease,Gastroenterology,胃粘膜炎症,H. pylori causes gastritis.,幽门螺杆菌引起胃炎。,H. pylori cause une gastrite.
+Hemoglobin,血红蛋白,Hémoglobine,Lab Test,Hematology,携氧蛋白质,Normal hemoglobin is 12-16 g/dL.,正常血红蛋白12-16g/dL。,L'hémoglobine normale est de 12-16 g/dL.
+Immunization,免疫接种,Immunisation,Procedure,Preventive,疫苗预防,Complete immunization schedule.,完成免疫接种计划。,Compléter le calendrier d'immunisation.
+Ketones,酮体,Cétones,Lab Test,Metabolic,脂肪代谢产物,Check urine ketones.,检查尿酮体。,Vérifier les cétones urinaires.
+Lymph node,淋巴结,Ganglion lymphatique,Anatomy,Immunology,免疫系统组织,Swollen lymph nodes indicate infection.,淋巴结肿大提示感染。,Les ganglions lymphatiques gonflés indiquent une infection.
+MRI,核磁共振,IRM,Diagnostic,Imaging,磁共振成像,MRI provides soft tissue detail.,MRI提供软组织细节。,L'IRM fournit des détails des tissus mous.
+Nebulizer,雾化器,Nébuliseur,Instrument,Respiratory,药物雾化装置,Use nebulizer for asthma.,哮喘患者使用雾化器。,Utiliser le nébuliseur pour l'asthme.
+Obesity,肥胖,Obésité,Disease,Nutrition,BMI>30的状态,Obesity increases health risks.,肥胖增加健康风险。,L'obésité augmente les risques pour la santé.
+Pneumonia,肺炎,Pneumonie,Disease,Respiratory,肺部感染,Pneumonia requires antibiotics.,肺炎需要抗生素治疗。,La pneumonie nécessite des antibiotiques.
+Quinine,奎宁,Quinine,Medication,Anti-malarial,抗疟药物,Quinine treats severe malaria.,奎宁治疗重症疟疾。,La quinine traite le paludisme grave.
+Rheumatism,风湿病,Rhumatisme,Disease,Rheumatology,关节肌肉疾病,Rheumatism affects joints.,风湿病影响关节。,Le rhumatisme affecte les articulations.
+Sepsis,败血症,Septicémie,Emergency,Infectious,全身感染反应,Sepsis is life-threatening.,败血症危及生命。,La septicémie met la vie en danger.
+Tuberculosis,结核病,Tuberculose,Disease,Infectious,分枝杆菌感染,TB requires long-term treatment.,结核病需要长期治疗。,La tuberculose nécessite un traitement à long terme.
+Ultrasound,超声,Échographie,Diagnostic,Imaging,声波成像技术,Ultrasound is safe in pregnancy.,超声在妊娠期安全。,L'échographie est sûre pendant la grossesse.
+Vaccine,疫苗,Vaccin,Medication,Preventive,免疫制剂,Annual flu vaccine is recommended.,建议年度流感疫苗接种。,Le vaccin annuel contre la grippe est recommandé.
+Wheezing,喘鸣,Sifflement,Symptom,Respiratory,呼吸道狭窄音,Asthma causes wheezing.,哮喘引起喘鸣。,L'asthme cause un sifflement.
+Xerostomia,口干症,Xérostomie,Symptom,Oral,唾液分泌减少,Medications cause xerostomia.,药物引起口干症。,Les médicaments causent la xérostomie.
+Yeast infection,真菌感染,Infection fongique,Disease,Infectious,真菌致病感染,Antifungal treats yeast infection.,抗真菌药治疗真菌感染。,Les antifongiques traitent l'infection fongique.
+Zoster,带状疱疹,Zona,Disease,Dermatology,水痘病毒再激活,Zoster affects nerve distribution.,带状疱疹影响神经分布。,Le zona affecte la distribution nerveuse.
+Abdomen,腹部,Abdomen,Anatomy,General,躯干下部,Examine the abdomen.,检查腹部。,Examiner l'abdomen.
+Bowel,肠道,Intestin,Anatomy,Gastroenterology,消化管道,Bowel obstruction is serious.,肠梗阻严重。,L'obstruction intestinale est grave.
+Consciousness,意识,Conscience,Assessment,Neurological,认知觉醒状态,Assess level of consciousness.,评估意识水平。,Évaluer le niveau de conscience.
+Dizziness,头晕,Vertige,Symptom,Neurological,平衡感觉异常,Dizziness affects balance.,头晕影响平衡。,Le vertige affecte l'équilibre.
+Examination,检查,Examen,Procedure,General,医学评估过程,Physical examination is essential.,体格检查必不可少。,L'examen physique est essentiel.
+Fatigue,疲劳,Fatigue,Symptom,General,体力精力不足,Chronic fatigue needs evaluation.,慢性疲劳需要评估。,La fatigue chronique nécessite une évaluation.
+Gait,步态,Démarche,Assessment,Neurological,行走方式,Assess patient's gait.,评估患者步态。,Évaluer la démarche du patient.
+Hydration,水合,Hydratation,Status,General,体液平衡状态,Maintain adequate hydration.,维持充足水合。,Maintenir une hydratation adéquate.
+Itching,瘙痒,Démangeaison,Symptom,Dermatology,皮肤刺激感觉,Antihistamine relieves itching.,抗组胺药缓解瘙痒。,L'antihistaminique soulage les démangeaisons.
+Joint,关节,Articulation,Anatomy,Orthopedics,骨骼连接处,Joint pain limits mobility.,关节疼痛限制活动。,La douleur articulaire limite la mobilité.
+Lymph,淋巴,Lymphe,Physiology,Immunology,免疫系统液体,Lymph drains tissue fluid.,淋巴引流组织液。,La lymphe draine le liquide tissulaire.
+Malaise,不适,Malaise,Symptom,General,全身不舒服感,General malaise suggests illness.,全身不适提示疾病。,Le malaise général suggère une maladie.
+Numbness,麻木,Engourdissement,Symptom,Neurological,感觉缺失,Numbness indicates nerve problem.,麻木提示神经问题。,L'engourdissement indique un problème nerveux.
+Pain,疼痛,Douleur,Symptom,General,不适感觉,Assess pain on scale 1-10.,用1-10分评估疼痛。,Évaluer la douleur sur une échelle de 1 à 10.
+Quality of life,生活质量,Qualité de vie,Assessment,General,生活满意度,Treatment improves quality of life.,治疗改善生活质量。,Le traitement améliore la qualité de vie.
+Respiration,呼吸,Respiration,Physiology,Respiratory,气体交换过程,Monitor respiration rate.,监测呼吸频率。,Surveiller la fréquence respiratoire.
+Skin,皮肤,Peau,Anatomy,Dermatology,人体最大器官,Skin protects the body.,皮肤保护身体。,La peau protège le corps.
+Temperature,体温,Température,Vital Sign,General,身体热度测量,Normal temperature is 36.5-37.5°C.,正常体温36.5-37.5°C。,La température normale est de 36,5-37,5°C.
+Urine,尿液,Urine,Lab Test,Urology,肾脏排泄物,Analyze urine sample.,分析尿液样本。,Analyser l'échantillon d'urine.
+Vein,静脉,Veine,Anatomy,Cardiovascular,回心血管,Draw blood from vein.,从静脉抽血。,Prélever du sang de la veine.
+Weight,体重,Poids,Measurement,General,身体质量,Monitor weight changes.,监测体重变化。,Surveiller les changements de poids.
+Xerosis,皮肤干燥,Xérose,Symptom,Dermatology,皮肤缺水状态,Moisturizer treats xerosis.,保湿剂治疗皮肤干燥。,L'hydratant traite la xérose.
+Yawn,打哈欠,Bâillement,Physiology,General,反射性深呼吸,Yawning indicates fatigue.,打哈欠提示疲劳。,Bâiller indique la fatigue.
+Appetite,食欲,Appétit,Assessment,General,进食欲望,Loss of appetite concerns.,食欲不振令人担忧。,La perte d'appétit est préoccupante.
+Blood,血液,Sang,Anatomy,Hematology,循环系统液体,Blood carries oxygen.,血液携带氧气。,Le sang transporte l'oxygène.
+Cough,咳嗽,Toux,Symptom,Respiratory,保护性反射,Productive cough expels mucus.,有痰咳嗽排出粘液。,La toux productive expulse le mucus.
+Digestion,消化,Digestion,Physiology,Gastroenterology,食物分解过程,Good digestion is essential.,良好消化很重要。,Une bonne digestion est essentielle.
+Energy,精力,Énergie,Assessment,General,活动能力,Lack of energy affects work.,缺乏精力影响工作。,Le manque d'énergie affecte le travail.
+Blood Pressure,血压,Tension artérielle,Vital Sign,Cardiovascular,血管内压力,Normal BP is 120/80 mmHg.,正常血压120/80mmHg。,La TA normale est de 120/80 mmHg.
+Heart Rate,心率,Fréquence cardiaque,Vital Sign,Cardiovascular,心跳次数/分钟,Normal heart rate 60-100/min.,正常心率60-100次/分。,La fréquence cardiaque normale est de 60-100/min.
+Respiratory Rate,呼吸频率,Fréquence respiratoire,Vital Sign,Respiratory,呼吸次数/分钟,Normal respiratory rate 12-20/min.,正常呼吸频率12-20次/分。,La fréquence respiratoire normale est de 12-20/min.
+Oxygen Saturation,血氧饱和度,Saturation en oxygène,Vital Sign,Respiratory,血液携氧能力,Normal oxygen saturation >95%.,正常血氧饱和度>95%。,La saturation normale en oxygène est >95%.
+Rhythm,节律,Rythme,Assessment,Cardiovascular,心跳规律性,Irregular rhythm needs ECG.,不规律节律需要心电图。,Le rythme irrégulier nécessite un ECG.
+Capillary Refill,毛细血管充盈,Remplissage capillaire,Assessment,Cardiovascular,末梢循环指标,Normal capillary refill <2 seconds.,正常毛细血管充盈<2秒。,Le remplissage capillaire normal est <2 secondes.
+Consciousness Level,意识水平,Niveau de conscience,Assessment,Neurological,认知功能状态,Use Glasgow Coma Scale.,使用格拉斯哥昏迷量表。,Utiliser l'échelle de coma de Glasgow.
+Pain Score,疼痛评分,Score de douleur,Assessment,General,疼痛强度量化,Document pain score regularly.,定期记录疼痛评分。,Documenter régulièrement le score de douleur.
+Skin Color,皮肤颜色,Couleur de la peau,Assessment,General,循环状态指标,Pale skin suggests anemia.,苍白皮肤提示贫血。,La peau pâle suggère une anémie.
+Pupil Size,瞳孔大小,Taille de la pupille,Assessment,Neurological,神经功能指标,Equal pupils are normal.,双侧瞳孔等大正常。,Des pupilles égales sont normales.
+Respiratory Effort,呼吸努力,Effort respiratoire,Assessment,Respiratory,呼吸工作量,Increased effort indicates distress.,呼吸努力增加提示窘迫。,L'effort accru indique une détresse.
+Breath Sounds,呼吸音,Bruits respiratoires,Assessment,Respiratory,肺部听诊发现,Clear breath sounds are normal.,清晰呼吸音正常。,Les bruits respiratoires clairs sont normaux.
+Oxygen Flow Rate,氧流量,Débit d'oxygène,Measurement,Respiratory,氧气给药剂量,Set oxygen flow to 2L/min.,设置氧流量2升/分。,Régler le débit d'oxygène à 2L/min.
+Blood Glucose,血糖,Glycémie,Lab Test,Endocrine,血液糖浓度,Normal fasting glucose <100mg/dL.,正常空腹血糖<100mg/dL。,La glycémie à jeun normale est <100mg/dL.
+Urine Output,尿量,Débit urinaire,Measurement,Urology,肾功能指标,Normal urine output >0.5mL/kg/hr.,正常尿量>0.5毫升/公斤/小时。,Le débit urinaire normal est >0,5mL/kg/h.
+Body Weight,体重,Poids corporel,Measurement,General,身体质量,Monitor weight daily.,每日监测体重。,Surveiller le poids quotidiennement.
+BMI,体质指数,IMC,Measurement,Nutrition,体重身高比值,BMI 18.5-24.9 is normal.,BMI18.5-24.9正常。,Un IMC de 18,5-24,9 est normal.
+Blood Loss,失血,Perte de sang,Assessment,Emergency,血液丢失量,Estimate blood loss volume.,估计失血量。,Estimer le volume de perte de sang.
+Pain Location,疼痛部位,Localisation de la douleur,Assessment,General,疼痛发生位置,Document exact pain location.,记录确切疼痛部位。,Documenter la localisation exacte de la douleur.
+Pain Character,疼痛性质,Caractère de la douleur,Assessment,General,疼痛感觉特征,Sharp pain differs from dull.,锐痛不同于钝痛。,La douleur aiguë diffère de la douleur sourde.
+Pain Duration,疼痛持续时间,Durée de la douleur,Assessment,General,疼痛时间长短,Chronic pain lasts >3 months.,慢性疼痛持续>3个月。,La douleur chronique dure >3 mois.
+Pain Radiation,疼痛放射,Radiation de la douleur,Assessment,General,疼痛扩散模式,Heart attack pain radiates to arm.,心梗疼痛放射至手臂。,La douleur cardiaque irradie vers le bras.
+Pallor,苍白,Pâleur,Symptom,General,皮肤血色不足,Pallor indicates poor circulation.,苍白提示循环不良。,La pâleur indique une mauvaise circulation.
+Cyanosis,紫绀,Cyanose,Symptom,Respiratory,缺氧表现,Central cyanosis is serious.,中心性紫绀严重。,La cyanose centrale est grave.
+Diaphoresis,出汗,Diaphorèse,Symptom,General,异常出汗,Diaphoresis suggests stress.,出汗提示应激。,La diaphorèse suggère un stress.
+Tremor,震颤,Tremblement,Symptom,Neurological,不自主颤动,Essential tremor is common.,特发性震颤常见。,Le tremblement essentiel est fréquent.
+Orientation,定向力,Orientation,Assessment,Neurological,时空人物认知,Test orientation to time/place.,测试时间地点定向力。,Tester l'orientation temps/lieu.
+Speech,言语,Parole,Assessment,Neurological,语言表达能力,Slurred speech indicates stroke.,言语不清提示中风。,La parole trouble indique un AVC.
+Strength,肌力,Force,Assessment,Neurological,肌肉收缩能力,Test muscle strength bilaterally.,双侧测试肌力。,Tester la force musculaire bilatéralement.
+Reflexes,反射,Réflexes,Assessment,Neurological,神经反应,Deep tendon reflexes are normal.,深腱反射正常。,Les réflexes tendineux profonds sont normaux.
+Skin Temperature,皮肤温度,Température cutanée,Assessment,General,体表温度,Cool skin suggests shock.,皮肤冰凉提示休克。,La peau froide suggère un choc.
+Moisture,湿度,Humidité,Assessment,General,皮肤湿润度,Dry skin indicates dehydration.,皮肤干燥提示脱水。,La peau sèche indique une déshydratation.
+Turgor,张力,Turgescence,Assessment,General,皮肤弹性,Poor turgor shows dehydration.,张力差显示脱水。,Une mauvaise turgescence montre une déshydratation.
+Lesion,病变,Lésion,Assessment,Dermatology,皮肤异常改变,Document all skin lesions.,记录所有皮肤病变。,Documenter toutes les lésions cutanées.
+Wheeze,哮鸣音,Sifflement,Assessment,Respiratory,气道狭窄音,Wheeze indicates bronchospasm.,哮鸣音提示支气管痉挛。,Le sifflement indique un bronchospasme.
+Stridor,喘鸣,Stridor,Assessment,Respiratory,上气道阻塞音,Stridor is a medical emergency.,喘鸣是医疗急症。,Le stridor est une urgence médicale.
+Sputum,痰液,Expectorations,Assessment,Respiratory,呼吸道分泌物,Yellow sputum suggests infection.,黄痰提示感染。,Les expectorations jaunes suggèrent une infection.
+Nail Color,指甲颜色,Couleur des ongles,Assessment,General,末梢循环指标,Blue nails indicate cyanosis.,蓝色指甲提示紫绀。,Les ongles bleus indiquent une cyanose.
+Capillary Pulse,毛细血管搏动,Pouls capillaire,Assessment,Cardiovascular,微循环状态,Weak capillary pulse is abnormal.,毛细血管搏动弱异常。,Un pouls capillaire faible est anormal.
+Jugular Vein,颈静脉,Veine jugulaire,Assessment,Cardiovascular,静脉回流指标,Distended jugular veins suggest heart failure.,颈静脉怒张提示心衰。,Les veines jugulaires distendues suggèrent une insuffisance cardiaque.
+Heart Sound,心音,Bruit cardiaque,Assessment,Cardiovascular,心脏听诊发现,Normal heart sounds are S1 and S2.,正常心音为S1和S2。,Les bruits cardiaques normaux sont S1 et S2.
+Murmur,杂音,Souffle,Assessment,Cardiovascular,异常心脏音,Heart murmur needs evaluation.,心脏杂音需要评估。,Le souffle cardiaque nécessite une évaluation.
+Bowel Sound,肠鸣音,Bruits intestinaux,Assessment,Gastroenterology,肠道活动音,Absent bowel sounds are concerning.,肠鸣音消失令人担忧。,L'absence de bruits intestinaux est préoccupante.
+Auscultate,听诊,Ausculter,Procedure,General,听诊器检查,Auscultate heart and lungs.,听诊心脏和肺部。,Ausculter le cœur et les poumons.
+Palpate,触诊,Palper,Procedure,General,手法检查,Palpate for masses.,触诊肿块。,Palper pour détecter des masses.
+Percuss,叩诊,Percuter,Procedure,General,叩击检查,Percuss to assess organ size.,叩诊评估器官大小。,Percuter pour évaluer la taille des organes.
+Inspect,视诊,Inspecter,Procedure,General,目视检查,Inspect skin for lesions.,视诊皮肤病变。,Inspecter la peau pour détecter des lésions.
+Measure,测量,Mesurer,Procedure,General,定量评估,Measure vital signs.,测量生命体征。,Mesurer les signes vitaux.
+Record,记录,Enregistrer,Procedure,General,文档化,Record all findings.,记录所有发现。,Enregistrer toutes les constatations.
+Administer,给药,Administrer,Procedure,General,药物治疗,Administer medication safely.,安全给药。,Administrer le médicament en toute sécurité.
+Collect,收集,Collecter,Procedure,General,样本采集,Collect blood sample.,采集血样。,Collecter un échantillon de sang.
+Dress,敷料,Panser,Procedure,General,伤口护理,Dress wound with sterile gauze.,用无菌纱布敷伤口。,Panser la plaie avec de la gaze stérile.
+Immobilize,固定,Immobiliser,Procedure,Emergency,限制活动,Immobilize fractured limb.,固定骨折肢体。,Immobiliser le membre fracturé.
+Irrigate,冲洗,Irriguer,Procedure,General,液体清洗,Irrigate wound thoroughly.,彻底冲洗伤口。,Irriguer soigneusement la plaie.
+Debride,清创,Débrider,Procedure,Surgery,清除坏死组织,Debride necrotic tissue.,清除坏死组织。,Débrider le tissu nécrotique.
+Intubate,插管,Intuber,Procedure,Emergency,建立人工气道,Intubate for airway protection.,插管保护气道。,Intuber pour protéger les voies aériennes.
+Catheterize,导管置入,Cathétériser,Procedure,General,管道插入,Catheterize bladder for urine.,导尿管导尿。,Cathétériser la vessie pour l'urine.
+Inject,注射,Injecter,Procedure,General,药物注入,Inject insulin subcutaneously.,皮下注射胰岛素。,Injecter de l'insuline par voie sous-cutanée.
+Aspirate,抽吸,Aspirer,Procedure,General,液体抽取,Aspirate joint fluid.,抽吸关节液。,Aspirer le liquide articulaire.
+Drain,引流,Drainer,Procedure,Surgery,液体排出,Drain pleural effusion.,引流胸腔积液。,Drainer l'épanchement pleural.
+Lavage,灌洗,Lavage,Procedure,General,冲洗清洁,Perform gastric lavage.,进行胃灌洗。,Effectuer un lavage gastrique.
+Suction,吸引,Aspiration,Procedure,General,负压清除,Suction airway secretions.,吸引气道分泌物。,Aspirer les sécrétions des voies aériennes.
+Reduce,复位,Réduire,Procedure,Orthopedics,骨折对位,Reduce fracture alignment.,复位骨折对线。,Réduire l'alignement de la fracture.
+Splint,夹板,Attelle,Procedure,Emergency,临时固定,Apply splint to injury.,给伤处上夹板。,Appliquer une attelle à la blessure.
+Elevate,抬高,Élever,Procedure,General,位置提升,Elevate injured limb.,抬高受伤肢体。,Élever le membre blessé.
+Apply,应用,Appliquer,Procedure,General,实施操作,Apply pressure to wound.,对伤口施压。,Appliquer une pression sur la plaie.
+Remove,移除,Retirer,Procedure,General,取出操作,Remove foreign body.,移除异物。,Retirer le corps étranger.
+Insert,插入,Insérer,Procedure,General,置入操作,Insert IV cannula.,插入静脉套管。,Insérer une canule IV.
+Extract,提取,Extraire,Procedure,General,取出操作,Extract tooth safely.,安全拔牙。,Extraire la dent en toute sécurité.
+Swab,拭子,Écouvillon,Procedure,General,样本采集,Take throat swab.,采集咽拭子。,Prendre un écouvillon de gorge.
+Culture,培养,Culture,Lab Test,Microbiology,细菌培养,Send specimen for culture.,送标本培养。,Envoyer le spécimen en culture.
+Stain,染色,Coloration,Lab Test,Microbiology,显微镜检查,Gram stain identifies bacteria.,革兰染色识别细菌。,La coloration de Gram identifie les bactéries.
+Centrifuge,离心,Centrifuger,Lab Test,General,样本分离,Centrifuge blood sample.,离心血样。,Centrifuger l'échantillon de sang.
+Incubate,孵育,Incuber,Lab Test,Microbiology,培养条件,Incubate at 37°C.,37度孵育。,Incuber à 37°C.
+Titrate,滴定,Titrer,Procedure,General,剂量调节,Titrate medication dose.,滴定药物剂量。,Titrer la dose de médicament.
+Weigh,称重,Peser,Procedure,General,重量测量,Weigh patient daily.,每日称患者体重。,Peser le patient quotidiennement.
+Count,计数,Compter,Procedure,General,数量统计,Count blood cells.,计数血细胞。,Compter les cellules sanguines.
+Dilute,稀释,Diluer,Procedure,Lab,浓度降低,Dilute solution properly.,正确稀释溶液。,Diluer correctement la solution.
+Filter,过滤,Filtrer,Procedure,Lab,杂质分离,Filter sterile solution.,过滤无菌溶液。,Filtrer la solution stérile.
+Label,标记,Étiqueter,Procedure,General,标识识别,Label specimen correctly.,正确标记标本。,Étiqueter correctement le spécimen.
+Transport,转运,Transporter,Procedure,General,物品移动,Transport patient safely.,安全转运患者。,Transporter le patient en toute sécurité.
+Store,储存,Stocker,Procedure,General,保存物品,Store medication properly.,正确储存药物。,Stocker correctement les médicaments.
+Disinfect,消毒,Désinfecter,Procedure,Infection Control,杀灭病原体,Disinfect equipment thoroughly.,彻底消毒设备。,Désinfecter soigneusement l'équipement.
+Sterilize,灭菌,Stériliser,Procedure,Infection Control,完全杀灭微生物,Sterilize surgical instruments.,灭菌手术器械。,Stériliser les instruments chirurgicaux.
+Position,定位,Positionner,Procedure,General,体位安排,Position patient comfortably.,舒适地安置患者。,Positionner confortablement le patient.
+Restrain,约束,Immobiliser,Procedure,Safety,限制活动,Restrain agitated patient.,约束躁动患者。,Immobiliser le patient agité.
+Resuscitate,复苏,Réanimer,Procedure,Emergency,生命抢救,Begin CPR immediately.,立即开始心肺复苏。,Commencer immédiatement la RCP.
+Defibrillate,除颤,Défibriller,Procedure,Emergency,电击治疗,Defibrillate ventricular fibrillation.,除颤室颤。,Défibriller la fibrillation ventriculaire.
+COVID-19,新冠肺炎,COVID-19,Disease,Infectious,Coronavirus disease 2019 pandemic,COVID-19 testing is required.,需要进行新冠肺炎检测。,Un test COVID-19 est requis.
+Diabetes,糖尿病,Diabète,Disease,Endocrine,Chronic condition affecting blood sugar,Monitor blood sugar for diabetes.,监测糖尿病血糖。,Surveiller la glycémie pour le diabète.
+Hypertension,高血压,Hypertension,Disease,Cardiovascular,High blood pressure condition,Control hypertension with medication.,用药物控制高血压。,Contrôler l'hypertension avec des médicaments.
+Stroke,中风,AVC,Emergency,Neurological,Cerebrovascular accident,Recognize stroke symptoms quickly.,快速识别中风症状。,Reconnaître rapidement les symptômes d'AVC.
+Myocardial infarction,心肌梗塞,Infarctus du myocarde,Emergency,Cardiac,Heart attack - blocked coronary artery,Treat myocardial infarction immediately.,立即治疗心肌梗塞。,Traiter immédiatement l'infarctus du myocarde.
+Antibiotic,抗生素,Antibiotique,Medication,Anti-infective,Medication to treat bacterial infections,Prescribe appropriate antibiotic.,开具合适的抗生素。,Prescrire l'antibiotique approprié.
+Insulin,胰岛素,Insuline,Medication,Hormone,Hormone regulating blood glucose,Administer insulin injection.,注射胰岛素。,Administrer une injection d'insuline.
+Stethoscope,听诊器,Stéthoscope,Instrument,Diagnostic,Device for listening to internal sounds,Use stethoscope to check heartbeat.,用听诊器检查心跳。,Utiliser le stéthoscope pour vérifier les battements cardiaques.
+Defibrillator,除颤器,Défibrillateur,Instrument,Emergency,Device to restore normal heart rhythm,Use defibrillator for cardiac arrest.,心脏骤停时使用除颤器。,Utiliser le défibrillateur en cas d'arrêt cardiaque.
+Mental health,心理健康,Santé mentale,Assessment,Psychiatry,Psychological and emotional well-being,Assess mental health status.,评估心理健康状况。,Évaluer l'état de santé mentale.
+Telemedicine,远程医疗,Télémédecine,Procedure,Technology,Remote healthcare delivery via technology,Conduct telemedicine consultation.,进行远程医疗咨询。,Effectuer une consultation de télémédecine.
+PPE,个人防护装备,EPI,Instrument,Safety,Personal protective equipment,Wear appropriate PPE.,穿戴适当的个人防护装备。,Porter l'EPI approprié.Test Term,测试,Test,Basic,General,Test automation,This is a test.,这是测试。,Ceci est un test.
