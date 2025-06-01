@@ -1,7 +1,5 @@
-# Medical Glossary Auto-Update Workflow
 name: Auto-Update Medical Glossary
 
-# Trigger when ANY CSV file is added/modified
 on:
   push:
     paths:
@@ -9,8 +7,6 @@ on:
       - '**/*.csv'
     branches:
       - main
-  
-  # Allow manual triggering
   workflow_dispatch:
 
 jobs:
@@ -34,40 +30,32 @@ jobs:
     - name: Find and use latest CSV file
       run: |
         echo "🔍 Scanning for CSV files..."
-        
-        # Find all CSV files and their modification times (compatible method)
         LATEST_CSV=$(ls -t *.csv 2>/dev/null | head -n1)
-        
         if [ -z "$LATEST_CSV" ]; then
           echo "❌ No CSV files found!"
           exit 1
         fi
-        
         echo "📄 Latest CSV file detected: $LATEST_CSV"
         echo "LATEST_CSV_FILE=$LATEST_CSV" >> $GITHUB_ENV
-        
-        # Show file info
         echo "📊 File details:"
         ls -la "$LATEST_CSV"
         echo "📋 First few lines:"
         head -3 "$LATEST_CSV"
         
-    - name: Validate and process CSV
+    - name: Create processing script
       run: |
-        node -e "
+        cat > process-csv.js << 'SCRIPT_EOF'
         const fs = require('fs');
         const Papa = require('papaparse');
         
         console.log('📊 Processing medical glossary CSV...');
         
         try {
-          // Read the latest CSV file
           const csvFile = process.env.LATEST_CSV_FILE;
           console.log('📖 Reading file:', csvFile);
           
           const csvContent = fs.readFileSync(csvFile, 'utf8');
           
-          // Parse and validate
           const parsed = Papa.parse(csvContent, {
             header: true,
             dynamicTyping: true,
@@ -85,9 +73,8 @@ jobs:
             row['EN Term'] !== 'EN Term'
           );
           
-          console.log(\`✅ Validated \${validTerms.length} medical terms\`);
+          console.log(`✅ Validated ${validTerms.length} medical terms`);
           
-          // Update meta.json with current info
           const meta = {
             title: 'Medical Glossary 1.0',
             description: 'Multilingual medical dictionary with comprehensive terminology',
@@ -105,7 +92,6 @@ jobs:
             }
           };
           
-          // Create data directory if it doesn't exist
           if (!fs.existsSync('data')) {
             fs.mkdirSync('data');
           }
@@ -113,30 +99,28 @@ jobs:
           fs.writeFileSync('data/meta.json', JSON.stringify(meta, null, 2));
           console.log('📄 Updated meta.json');
           
-          // Copy latest CSV to standard name for the website
           fs.copyFileSync(process.env.LATEST_CSV_FILE, 'medical-glossary.csv');
           console.log('📋 Copied latest CSV to medical-glossary.csv for website');
           
-          // Generate summary
-          const summary = \`## 📊 Medical Glossary Update Summary
+          const summary = `## 📊 Medical Glossary Update Summary
           
-**Date:** \${new Date().toLocaleDateString()}
-**Source File:** \${process.env.LATEST_CSV_FILE}
-**Total Terms:** \${validTerms.length}
-**Categories:** \${meta.categories.length}
-**Languages:** English, Chinese, French
+        **Date:** ${new Date().toLocaleDateString()}
+        **Source File:** ${process.env.LATEST_CSV_FILE}
+        **Total Terms:** ${validTerms.length}
+        **Categories:** ${meta.categories.length}
+        **Languages:** English, Chinese, French
 
-### Auto-Detection Results
-- 🔍 Scanned repository for CSV files
-- 📄 Selected: \${process.env.LATEST_CSV_FILE}
-- ✅ Processed \${validTerms.length} medical terms
-- 🔗 Updated medical-glossary.csv for website
+        ### Auto-Detection Results
+        - 🔍 Scanned repository for CSV files
+        - 📄 Selected: ${process.env.LATEST_CSV_FILE}
+        - ✅ Processed ${validTerms.length} medical terms
+        - 🔗 Updated medical-glossary.csv for website
 
-### Categories Found
-\${meta.categories.map(cat => \`- \${cat}\`).join('\\n')}
+        ### Categories Found
+        ${meta.categories.map(cat => `- ${cat}`).join('\n')}
 
----
-🌿 **Medical Glossary 1.0** - Auto-updated with latest CSV file!\`;
+        ---
+        🌿 **Medical Glossary 1.0** - Auto-updated with latest CSV file!`;
           
           fs.writeFileSync('UPDATE_SUMMARY.md', summary);
           console.log('📋 Generated update summary');
@@ -145,7 +129,10 @@ jobs:
           console.error('❌ Error processing CSV:', error.message);
           process.exit(1);
         }
-        "
+        SCRIPT_EOF
+        
+    - name: Process CSV file
+      run: node process-csv.js
         
     - name: Commit changes
       run: |
