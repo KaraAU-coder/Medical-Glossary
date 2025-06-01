@@ -1,0 +1,4 @@
+GitHub Actions Debug Info:
+- Files found by automation
+- Timestamps and sizes
+- Which file was selected
