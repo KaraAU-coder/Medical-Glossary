@@ -12,11 +12,37 @@ const path = require('path');
 
 // Configuration
 const CONFIG = {
-    csvFile: 'medical-glossary.csv',
+    csvFile: null, // Will be auto-detected
     metaFile: 'data/meta.json',
     summaryFile: 'UPDATE_SUMMARY.md',
     requiredFields: ['EN Term', 'ZH', 'FR', 'Category', 'Subcategory', 'Notes', 'Example_EN', 'Example_ZH', 'Example_FR']
 };
+
+/**
+ * Find the latest CSV file in the directory
+ */
+function findLatestCSV() {
+    const csvFiles = fs.readdirSync('.')
+        .filter(file => file.endsWith('.csv'))
+        .map(file => ({
+            name: file,
+            time: fs.statSync(file).mtime.getTime()
+        }))
+        .sort((a, b) => b.time - a.time);
+    
+    if (csvFiles.length === 0) {
+        throw new Error('No CSV files found in directory');
+    }
+    
+    console.log(`🔍 Found ${csvFiles.length} CSV file(s):`);
+    csvFiles.forEach((file, index) => {
+        const indicator = index === 0 ? '📄 LATEST' : '📁';
+        const date = new Date(file.time).toLocaleString();
+        console.log(`  ${indicator} ${file.name} (modified: ${date})`);
+    });
+    
+    return csvFiles[0].name;
+}
 
 /**
  * Simple CSV parser (lightweight alternative to PapaParse)
@@ -141,13 +167,14 @@ function validateData(data) {
 /**
  * Update metadata file
  */
-function updateMetadata(validation) {
+function updateMetadata(validation, sourceFile) {
     const meta = {
         title: 'Medical Glossary 1.0',
         description: 'Multilingual medical dictionary with comprehensive terminology',
         version: '1.0.0',
         lastUpdated: new Date().toISOString(),
         generated: new Date().toISOString(),
+        sourceFile: sourceFile,
         languages: ['en', 'zh', 'fr'],
         totalTerms: validation.stats.totalTerms,
         categories: validation.stats.categories,
@@ -155,7 +182,7 @@ function updateMetadata(validation) {
         buildInfo: {
             buildDate: new Date().toISOString(),
             environment: process.env.NODE_ENV || 'development',
-            automation: 'auto-update-script',
+            automation: 'auto-detect-latest-csv',
             termsWithExamples: validation.stats.termsWithExamples,
             termsWithNotes: validation.stats.termsWithNotes
         }
@@ -174,16 +201,22 @@ function updateMetadata(validation) {
 /**
  * Generate update summary
  */
-function generateSummary(validation, meta) {
+function generateSummary(validation, meta, sourceFile) {
     const timestamp = new Date().toLocaleString();
     const stats = validation.stats;
     
     const summary = `# 📊 Medical Glossary Update Summary
 
 **Last Updated:** ${timestamp}
+**Source File:** ${sourceFile}
 **Total Terms:** ${stats.totalTerms}
 **Categories:** ${stats.categories.length}
 **Subcategories:** ${stats.subcategories.length}
+
+## 🔍 Auto-Detection Results
+- **Latest CSV detected:** ${sourceFile}
+- **File selection:** Automatically chose most recently modified CSV
+- **Processing:** Successfully validated and processed
 
 ## 📈 Statistics
 - **Original entries:** ${stats.originalCount}
@@ -202,7 +235,13 @@ ${validation.warnings.length > 0 ? validation.warnings.map(w => `- ${w}`).join('
 ${validation.errors.length > 0 ? validation.errors.map(e => `- ${e}`).join('\n') : 'No errors'}
 
 ---
-🌿 **Medical Glossary 1.0** - Auto-updated and ready for deployment!
+🌿 **Medical Glossary 1.0** - Auto-updated with latest CSV file!
+
+> **How it works:** 
+> 1. Scans directory for all CSV files
+> 2. Automatically selects the most recently modified file
+> 3. Processes and validates the data
+> 4. Updates your medical glossary website
 
 > **Next Steps:** 
 > 1. Review any warnings above
@@ -222,10 +261,10 @@ async function updateGlossary() {
     console.log('=====================================\n');
     
     try {
-        // Check if CSV file exists
-        if (!fs.existsSync(CONFIG.csvFile)) {
-            throw new Error(`CSV file not found: ${CONFIG.csvFile}`);
-        }
+        // Auto-detect the latest CSV file
+        console.log('🔍 Auto-detecting latest CSV file...');
+        const latestCSV = findLatestCSV();
+        CONFIG.csvFile = latestCSV;
         
         console.log(`📖 Reading ${CONFIG.csvFile}...`);
         const csvContent = fs.readFileSync(CONFIG.csvFile, 'utf8');
@@ -251,12 +290,19 @@ async function updateGlossary() {
         }
         
         console.log('\n📄 Updating metadata...');
-        const meta = updateMetadata(validation);
+        const meta = updateMetadata(validation, CONFIG.csvFile);
         
         console.log('📋 Generating summary...');
-        generateSummary(validation, meta);
+        generateSummary(validation, meta, CONFIG.csvFile);
+        
+        // Copy latest CSV to standard name for website
+        if (CONFIG.csvFile !== 'medical-glossary.csv') {
+            fs.copyFileSync(CONFIG.csvFile, 'medical-glossary.csv');
+            console.log('📋 Copied latest CSV to medical-glossary.csv for website');
+        }
         
         console.log('\n🎉 Update completed successfully!');
+        console.log(`📊 Source: ${CONFIG.csvFile}`);
         console.log(`📊 Final stats: ${validation.stats.totalTerms} terms, ${validation.stats.categories.length} categories`);
         
         if (validation.errors.length === 0) {
