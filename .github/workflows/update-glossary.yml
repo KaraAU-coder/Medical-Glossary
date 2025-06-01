@@ -1,0 +1,131 @@
+# Medical Glossary Auto-Update Workflow
+name: Auto-Update Medical Glossary
+
+# Trigger when CSV file is modified
+on:
+  push:
+    paths:
+      - 'medical-glossary.csv'
+      - '*.csv'
+    branches:
+      - main
+  
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  update-glossary:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install papaparse
+        
+    - name: Validate and process CSV
+      run: |
+        node -e "
+        const fs = require('fs');
+        const Papa = require('papaparse');
+        
+        console.log('📊 Processing medical glossary CSV...');
+        
+        try {
+          // Read CSV file
+          const csvContent = fs.readFileSync('medical-glossary.csv', 'utf8');
+          
+          // Parse and validate
+          const parsed = Papa.parse(csvContent, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true
+          });
+          
+          if (parsed.errors.length > 0) {
+            console.error('❌ CSV parsing errors:', parsed.errors);
+            process.exit(1);
+          }
+          
+          const validTerms = parsed.data.filter(row => 
+            row['EN Term'] && 
+            row['EN Term'].trim() !== '' && 
+            row['EN Term'] !== 'EN Term'
+          );
+          
+          console.log(\`✅ Validated \${validTerms.length} medical terms\`);
+          
+          // Update meta.json with current info
+          const meta = {
+            title: 'Medical Glossary 1.0',
+            description: 'Multilingual medical dictionary with comprehensive terminology',
+            version: '1.0.0',
+            lastUpdated: new Date().toISOString(),
+            generated: new Date().toISOString(),
+            languages: ['en', 'zh', 'fr'],
+            totalTerms: validTerms.length,
+            categories: [...new Set(validTerms.map(t => t.Category).filter(Boolean))].sort(),
+            buildInfo: {
+              buildDate: new Date().toISOString(),
+              environment: 'production',
+              automation: 'github-actions'
+            }
+          };
+          
+          // Create data directory if it doesn't exist
+          if (!fs.existsSync('data')) {
+            fs.mkdirSync('data');
+          }
+          
+          fs.writeFileSync('data/meta.json', JSON.stringify(meta, null, 2));
+          console.log('📄 Updated meta.json');
+          
+          // Generate summary
+          const summary = \`## 📊 Medical Glossary Update Summary
+          
+**Date:** \${new Date().toLocaleDateString()}
+**Total Terms:** \${validTerms.length}
+**Categories:** \${meta.categories.length}
+**Languages:** English, Chinese, French
+
+### Recent Changes
+- CSV file updated automatically
+- Metadata refreshed
+- Site ready for deployment
+
+🌿 Your Medical Glossary 1.0 is up to date!\`;
+          
+          fs.writeFileSync('UPDATE_SUMMARY.md', summary);
+          console.log('📋 Generated update summary');
+          
+        } catch (error) {
+          console.error('❌ Error processing CSV:', error.message);
+          process.exit(1);
+        }
+        "
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/meta.json UPDATE_SUMMARY.md
+        git diff --staged --quiet || git commit -m "🤖 Auto-update: Refresh glossary metadata [$(date '+%Y-%m-%d %H:%M')]"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+        
+    - name: Deploy to GitHub Pages
+      run: |
+        echo "🚀 GitHub Pages will automatically deploy the updated site"
+        echo "✅ Medical Glossary 1.0 update complete!"
