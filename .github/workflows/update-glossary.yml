@@ -1,8 +1,5 @@
 # Medical Glossary Auto-Update Workflow
 name: Auto-Update Medical Glossary
-cat > .github/workflows/update-glossary.yml << 'EOF'
-# Medical Glossary Auto-Update Workflow
-name: Auto-Update Medical Glossary
 
 # Trigger when ANY CSV file is added/modified
 on:
@@ -38,8 +35,8 @@ jobs:
       run: |
         echo "🔍 Scanning for CSV files..."
         
-        # Find the most recently modified CSV file
-        LATEST_CSV=$(find . -maxdepth 1 -name "*.csv" -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2)
+        # Find all CSV files and their modification times (compatible method)
+        LATEST_CSV=$(ls -t *.csv 2>/dev/null | head -n1)
         
         if [ -z "$LATEST_CSV" ]; then
           echo "❌ No CSV files found!"
@@ -48,10 +45,6 @@ jobs:
         
         echo "📄 Latest CSV file detected: $LATEST_CSV"
         echo "LATEST_CSV_FILE=$LATEST_CSV" >> $GITHUB_ENV
-        
-        # Create/update symlink to point to latest file
-        ln -sf "$LATEST_CSV" medical-glossary-current.csv
-        echo "🔗 Created symlink: medical-glossary-current.csv -> $LATEST_CSV"
         
         # Show file info
         echo "📊 File details:"
@@ -69,7 +62,7 @@ jobs:
         
         try {
           // Read the latest CSV file
-          const csvFile = process.env.LATEST_CSV_FILE || 'medical-glossary-current.csv';
+          const csvFile = process.env.LATEST_CSV_FILE;
           console.log('📖 Reading file:', csvFile);
           
           const csvContent = fs.readFileSync(csvFile, 'utf8');
@@ -143,9 +136,7 @@ jobs:
 \${meta.categories.map(cat => \`- \${cat}\`).join('\\n')}
 
 ---
-🌿 **Medical Glossary 1.0** - Auto-updated with latest CSV file!
-
-> **How it works:** Drop any CSV file (like june2update.csv) into the repository, and the system automatically detects and uses the newest one!\`;
+🌿 **Medical Glossary 1.0** - Auto-updated with latest CSV file!\`;
           
           fs.writeFileSync('UPDATE_SUMMARY.md', summary);
           console.log('📋 Generated update summary');
@@ -160,7 +151,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add data/meta.json UPDATE_SUMMARY.md medical-glossary.csv medical-glossary-current.csv
+        git add data/meta.json UPDATE_SUMMARY.md medical-glossary.csv
         git diff --staged --quiet || git commit -m "🤖 Auto-update: Process latest CSV file [$LATEST_CSV_FILE] [$(date '+%Y-%m-%d %H:%M')]"
         
     - name: Push changes
