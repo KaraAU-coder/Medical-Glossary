@@ -692,11 +692,17 @@
                 message = '🍃 初心不改，更新于';
             }
             
-            const formattedDate = date.toLocaleDateString(locale, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
+            const formattedDate = date.toLocaleString(locale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+    timeZoneName: 'short' // Optional: shows time zone like UTC+8
+});
+
             
             footer.innerHTML = `<span class="purpose-message">${message} <span id="update-date">${formattedDate}</span></span>`;
         }
@@ -752,5 +758,28 @@
             });
         });
     </script>
+    <script>
+async function fetchLastModifiedDateFromGitHub() {
+    const apiUrl = "https://api.github.com/repos/KaraAU-coder/Medical-Glossary/commits?path=medical-glossary.csv&page=1&per_page=1";
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.length > 0) {
+            const commitDate = new Date(data[0].commit.committer.date);
+            updateFooterWithDate(commitDate); // Use your existing formatting function
+        } else {
+            console.warn("No commit data found.");
+        }
+    } catch (error) {
+        console.error("Failed to fetch last modified date:", error);
+    }
+}
+
+// Replace current date footer logic with GitHub date
+document.addEventListener('DOMContentLoaded', function() {
+    fetchLastModifiedDateFromGitHub();
+});
+</script>
+
 </body>
 </html>
